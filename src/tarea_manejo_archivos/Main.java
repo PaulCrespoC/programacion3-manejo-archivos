@@ -48,15 +48,13 @@ public class Main {
                 : "------ El archivo está vacío ------"
         );
         System.out.println("Ingresa en el siguiente formato: producto:valor ");
-        
+        String entrada = sc.next();
         if (contenido != null && contenido.length() > 0) {
-            String entrada = sc.next();
             contenido += "\n" + entrada;
             LectorEscritor.escribir(path, contenido);
             System.out.println("---- Producto agregado correctamente ----");
             return;
         }
-        String entrada = sc.next();
         LectorEscritor.escribir(path, entrada);
         System.out.println("---- Producto ingresado correctamente ----");
     }
